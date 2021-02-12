@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/cupertino.dart';
 import 'package:tdd_number_trivia/features/number_trivia/domain/entities/number_trivia.dart';
 
@@ -7,7 +5,10 @@ class NumberTriviaModel extends NumberTrivia {
   NumberTriviaModel({
     @required String text,
     @required int number,
-  }) : super(text: text, number: number);
+  }) : super(
+          text: text,
+          number: number,
+        );
 
   factory NumberTriviaModel.fromJson(Map<String, dynamic> json) {
     return NumberTriviaModel(
