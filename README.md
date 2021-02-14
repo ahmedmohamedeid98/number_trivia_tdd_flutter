@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # number_trivia_tdd_flutter
-Simple API based app build with TEST DRIVEN DEVELOPMENT clean code approach in flutter 
+Simple API based app build with [Test Driven Development] clean code approach in flutter 
 =======
 # tdd_number_trivia
 
@@ -18,4 +18,49 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
->>>>>>> add tdd structure
+
+# TDD Structure
+<pre>
+
+             -------------------------------------
+                                                 |
+            Widgets                              |
+                                                 |-----> Presentation Layer
+    - Presentation Logic Holder -                |
+     (Bloc, ChangeNotifier,...)                  |
+                                                 |
+              -----------------------------------            
+              
+              ||||
+       Dependancy Injection
+          e.g. Get_it
+              ||||
+              
+              
+              ------------------------------------
+                                                 |
+                                                 |
+           UseCases                              |
+                                                 |
+                                                 |
+      -----------------                          |-------
+     |    Entity      |                          |       |----> Domain Layer (Independed Layer)
+      -----------------                          |-------
+                                                 |
+                                                 |
+Repository Contract (abstracted)                 |
+                                                 |
+             -------------------------------------  
+             
+             ------------------------------------
+                                                 |
+   Repository Implementation                     |
+                                                 |
+    Models (extends entity)                      |-----> Data Layer
+                                                 |
+Remote DataSource or Local DataSource            |
+                                                 |
+             ------------------------------------
+            
+            
+  </pre>
