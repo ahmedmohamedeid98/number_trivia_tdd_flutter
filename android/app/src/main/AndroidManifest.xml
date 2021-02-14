@@ -1,5 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tdd_number_trivia">
+   
+   
+   <application android:usesCleartextTraffic="true"/>
    <application
         android:label="tdd_number_trivia"
         android:icon="@mipmap/ic_launcher">
@@ -38,4 +41,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
